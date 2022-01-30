@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+
+
+    <!-- Start Content -->
+    <div class="container py-5">
+        <div class="row">
+
+
+
+            <div class="col-lg-9">
+
+                <div class="row">
+                    {% for product in products %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="{{product.image.url}}">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white mt-2" href="{% url 'product-detail' product.id %}"><i class="far fa-eye"></i></a></li>   
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <a href="{% url 'product-detail' product.id %}" class="h3 text-decoration-none">{{product.name}}</a>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li>{% trans 'Məhsulun kodu' %} : {{product.mehsulun_kodu}}</li>
+                                    <li class="pt-2">
+                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    
+                </div>
+
+                <!--Pagination-->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          {% if page_obj.has_previous %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page_obj.previous_page_number }}">{% trans 'Əvvəlki' %}</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="True">{% trans 'Əvvəlki' %}</a>
+            </li>
+          {% endif %}
+          {% for i in page_obj.paginator.page_range %}
+            {% if page_obj.number == i %}
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">
+                  {{ i }}
+                  <span class="sr-only">(current)</span>
+                </span>
+              </li>
+            {% else %}
+              <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% if page_obj.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page_obj.next_page_number }}">{% trans 'Sonrakı' %}</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="True">{% trans 'Sonrakı' %}</a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
+      <!--end of Pagination-->
+  
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- End Content -->
+
+{% endblock %}

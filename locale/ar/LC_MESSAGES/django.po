@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: templates/contact.html:10
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-25 02:47+0400\n"
+"PO-Revision-Date: 2022-01-25 02:29+0400\n"
+"Last-Translator:   <arifogluisa@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: cbcbanyo/settings.py:140
+msgid "Azerbaijani"
+msgstr ""
+
+#: cbcbanyo/settings.py:141
+msgid "English"
+msgstr ""
+
+#: cbcbanyo/settings.py:142
+msgid "Turkish"
+msgstr ""
+
+#: cbcbanyo/settings.py:143
+msgid "Russian"
+msgstr ""
+
+#: cbcbanyo/settings.py:144
+msgid "Arabic"
+msgstr ""
+
+#: core/forms.py:10
+msgid "Ad"
+msgstr "اسم"
+
+#: core/forms.py:14
+msgid "Email"
+msgstr ""
+
+#: core/forms.py:18
+msgid "Mətin"
+msgstr "رسالة"
+
+#: core/views.py:22
+msgid "Mesajınız uğurla göndərildi, tezliklə sizinlə əlaqə saxlanılacaq"
+msgstr "تم إرسال رسالتك بنجاح ، وسنتواصل معك قريبًا"
+
+#: templates/base.html:74 templates/base.html:163
+msgid "Ana səhifə"
+msgstr "الصفحة الرئيسية"
+
+#: templates/base.html:75 templates/base.html:164
+msgid "Haqqımızda"
+msgstr "معلومات عنا"
+
+#: templates/base.html:76 templates/base.html:165
+msgid "Məhsullarımız"
+msgstr "منتجاتنا"
+
+#: templates/base.html:77 templates/base.html:166
+msgid "Show Room"
+msgstr ""
+
+#: templates/base.html:78 templates/base.html:167 templates/contact.html:8
+#: templates/contact.html:30
+msgid "Bizimlə əlaqə"
+msgstr "اتصل"
+
+#: templates/base.html:81
+msgid "Dil"
+msgstr "لغة"
+
+#: templates/base.html:125
+msgid "Axtardığınız məhsulun adını yazın ..."
+msgstr "اكتب اسم المنتج الذي تبحث عنه ..."
+
+#: templates/base.html:147
+msgid "Show Room adresi - Ziya Bünyadov prospekti, Pelit LLC"
+msgstr "عنوان \"Show Room\" - شارع ضياء بونيادوف ، شركة بيليت المحدودة"
+
+#: templates/base.html:161
+msgid "Əlavə məlumat"
+msgstr "مزيد من المعلومات"
+
+#: templates/contact.html:36
+msgid "Göndər"
+msgstr "إرسال"
+
+#: templates/index.html:22
+msgid ""
+"Hamamınıza mebel seçimi edərkən laminat üzlüklü PVC hamam məhsullarımızı "
+"seçin"
+msgstr ""
+"عند اختيار أثاث لحمامك ، اختر منتجاتنا من منتجات الحمام البلاستيكية المصفحة"
+
+#: templates/index.html:37
+msgid ""
+"Çünki biz PVC üstünə laminat örtük çəkərək nəm və rütubətdən təsirlənməyən, "
+"həşəratlara davamlı, yüngül və uzun ömürlü məhsullar istehsal edirik"
+msgstr ""
+"لأننا ننتج منتجات مقاومة للحشرات وخفيفة الوزن وطويلة الأمد لا تتأثر بالرطوبة "
+"والرطوبة من خلال وضع طلاء مصفح على PVC"
+
+#: templates/index.html:72
+msgid "Ayın məhsulları"
+msgstr "منتجات الشهر"
+
+#: templates/index.html:74
+msgid "Ayın ən çox satılan məhsullarına nəzər yetirin"
+msgstr "ألق نظرة على المنتجات الأكثر مبيعًا لهذا الشهر"
+
+#: templates/index.html:83
+msgid "Ətraflı"
+msgstr "تفاصيل"
+
+#: templates/product-detail.html:24 templates/products.html:30
+msgid "Məhsulun kodu"
+msgstr "كود المنتج"
+
+#: templates/product-detail.html:34
+msgid "Alt şkafın eni / hündürlüyü / dərinliyi"
+msgstr "عرض / ارتفاع / عمق الخزانة السفلية"
+
+#: templates/product-detail.html:44
+msgid "Üst şkafın eni / hündürlüyü / dərinliyi"
+msgstr "عرض / ارتفاع / عمق الخزانة العلوية"
+
+#: templates/products.html:54 templates/products.html:58
+msgid "Əvvəlki"
+msgstr "سابق"
+
+#: templates/products.html:75 templates/products.html:79
+msgid "Sonrakı"
+msgstr "التالي"
+
+#: templates/showroom.html:157
+msgid ""
+"Bakı şəhəri Ziya Bünyadov prospektində yerləşən Pelit parkda 10 nömrəli ofis "
+"ikinci mərtəbədə yerləşən Show Room`a gələrək\n"
+"                                məhsullarımıza özünüz nəzər yetirə "
+"bilərsiniz."
+msgstr ""
+"زيارة \"صالة العرض\" الواقعة في الطابق الثاني من المكتب رقم 10 في بيليت "
+"بارك ، الواقعة في شارع ضياء بونيادوف ، باكو\n"
+"يمكنك إلقاء نظرة على منتجاتنا بنفسك."
+
+#: templates/showroom.html:172
+msgid "Show Room`un adresi"
+msgstr "عنوان \"صالة العرض\""

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+
+<!-- Open Content -->
+<section class="bg-light">
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-lg-5 mt-5">
+                <div class="card mb-3">
+                    <img class="card-img img-fluid" src="{{product.image.url}}" alt="Card image cap" id="product-detail">
+                </div>
+
+            </div>
+            <!-- col end -->
+            <div class="col-lg-7 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="h2">{{product.name}}</h1>
+
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <h6>{% trans 'Məhsulun kodu' %} :</h6>
+                            </li>
+                            <li class="list-inline-item">
+                                <p class="text-muted"><strong>{{product.mehsulun_kodu}}</strong></p>
+                            </li>
+                        </ul>
+
+
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <h6>{% trans 'Alt şkafın eni / hündürlüyü / dərinliyi' %} :</h6>
+                            </li>
+                            <li class="list-inline-item">
+                                <p class="text-muted"><strong>{{product.alt_dolap_eni}} / {{product.alt_dolap_hundurluyu}} / {{product.alt_dolap_derinliyi}}</strong></p>
+                            </li>
+                        </ul>
+
+
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <h6>{% trans 'Üst şkafın eni / hündürlüyü / dərinliyi' %} :</h6>
+                            </li>
+                            <li class="list-inline-item">
+                                <p class="text-muted"><strong>{{product.ust_dolap_eni}} / {{product.ust_dolap_hundurluyu}} / {{product.ust_dolap_derinliyi}}</strong></p>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Close Content -->
+
+        </div>
+
+
+    </div>
+</section>
+<!-- End Article -->
+<style>
+    .skaf ul {
+        margin-top: 10px;
+    }
+</style>
+    
+{% endblock %}
+ 

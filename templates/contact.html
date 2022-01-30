@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <!-- Start Content Page -->
+    <div class="container-fluid bg-light py-5">
+        <div class="col-md-6 m-auto text-center">
+            <h1 class="h1">{% translate 'Bizimlə əlaqə' %}</h1>
+            <p>
+                {% translate '' %}
+            </p>
+        </div>
+    </div>
+	<div>
+	{% if messages %}
+		{% for message in messages %}
+			<div class="alert alert-{{message.tags}}">
+				<center>{{message}}</center>
+			</div>
+		{% endfor %}
+	{% endif %}
+	</div>
+    <!-- Start Contact -->
+    <div class="contact-in">
+        <div class="contact-map">
+            
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.2977543781549!2d49.882312429233956!3d40.42676899871023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403088221cbb1f33%3A0xb66bb61a4e488128!2sPelit%20LLC!5e0!3m2!1str!2s!4v1642685902844!5m2!1str!2s" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></iframe> 
+        </div>
+        <div class="contact-form">
+            <h1>{% translate 'Bizimlə əlaqə' %}</h1>
+            <form action="" method="POST">
+				{% csrf_token %}
+                {{form.name}}
+                {{form.email}}
+                {{form.message}}
+                <input type="submit" value="{% translate 'Göndər' %}" name="Submit" class="contact-form-btn" />
+            </form>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+	
+    <style>
+    *
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	align-items: center;
+	background: #e9eef5;
+	font-family: 'Poppins', sans-serif;
+}
+
+.contact-in
+{
+	width: 80%;
+	height: auto;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0px 0px 10px 0px #666;
+}
+
+.contact-map
+{
+	width: 100%;
+	height: auto;
+	flex: 50%;
+}
+.contact-map iframe
+{
+	width: 100%;
+	height: 100%;
+}
+.contact-form
+{
+	width: 100%;
+	height: auto;
+	flex: 50%;
+	padding: 30px;
+	text-align: center;
+}
+.contact-form h1
+{
+	margin-bottom: 10px;
+}
+
+.contact-form-txt
+{
+	width: 100%;
+	height: 40px;
+	color: #000;
+	border: 1px solid #bcbcbc;
+	border-radius: 50px;
+	outline: none;
+	margin-bottom: 20px;
+	padding: 15px;
+}
+.contact-form-txt::placeholder
+{
+	color: #aaa;
+}
+.contact-form-textarea
+{
+	width: 100%;
+	height: 130px;
+	color: #000;
+	border: 1px solid #bcbcbc;
+	border-radius: 10px;
+	outline: none;
+	margin-bottom: 20px;
+	padding: 15px;
+	font-family: 'Poppins', sans-serif;
+}
+.contact-form-textarea::placeholder
+{
+	color: #aaa;
+}
+
+.contact-form-btn
+{
+	width: 100%;
+	border:none;
+	outline: none;
+	border-radius: 50px;
+	background: #a38eb6;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px 0;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+
+
+</style>
+
+{% endblock %}
